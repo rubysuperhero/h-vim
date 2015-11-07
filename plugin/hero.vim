@@ -18,8 +18,14 @@ nm <leader>hon :vs ~/hero/notes/.index/<cword>.hdoc<cr>
 
 "" Open a bg window for importing a bunch of notes
 
-nnoremap <leader>ni  :!tbg 'note import'<cr>
+nnoremap <leader>ni  :!tfg 'note import'<cr>
 nnoremap <leader>hni :!tbg 'note import'<cr>
+
+nnoremap <leader>ti  :!tfg 'h task import'<cr>
+nnoremap <leader>hti :!tbg 'h task import'<cr>
+
+nnoremap <leader>pi  :!tfg 'h tip import'<cr>
+nnoremap <leader>hpi :!tbg 'h tip import'<cr>
 
 nnoremap <leader>ns :HeroNoteSave<cr>
 vnoremap <leader>ns :HeroNoteSave<cr>
@@ -156,4 +162,5 @@ endfunction
 cabbrev vf VsOldfile
 
 cabbrev safeil <c-r>=system('ilstart ' . expand('%'))<cr>,$il!/<C-r>=Eatchar('\s')<cr>
+cabbrev sil <c-r>=system('ilstart ' . expand('%'))<cr>,$il!/<C-r>=Eatchar('\s')<cr>
 
